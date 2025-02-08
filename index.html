@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Women Dating</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(135deg, #f8d3e0, #e2a9c4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .question-box {
+        position: fixed;
+        width: 490px;
+        height: 587px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        z-index: 10;
+      }
+
+      .question-box h2 {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .button {
+        width: 80%;
+        padding: 15px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        background: #a71d74;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .button:hover {
+        background: #860a58;
+      }
+
+      .placeholder {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+      }
+
+      /* Случайные позиции для блоков */
+      .placeholder:nth-child(1) {
+        width: 100px;
+        height: 150px;
+        top: 10%;
+        left: 5%;
+      }
+      .placeholder:nth-child(2) {
+        width: 130px;
+        height: 180px;
+        top: 50%;
+        left: 15%;
+      }
+      .placeholder:nth-child(3) {
+        width: 120px;
+        height: 160px;
+        top: 30%;
+        right: 10%;
+      }
+      .placeholder:nth-child(4) {
+        width: 140px;
+        height: 190px;
+        bottom: 10%;
+        left: 30%;
+      }
+      .placeholder:nth-child(5) {
+        width: 110px;
+        height: 140px;
+        top: 15%;
+        right: 20%;
+      }
+      .placeholder:nth-child(6) {
+        width: 150px;
+        height: 200px;
+        bottom: 20%;
+        right: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Фоновые блоки вместо картинок -->
+      <div class="placeholder"></div>
+      <div class="placeholder"></div>
+      <div class="placeholder"></div>
+      <div class="placeholder"></div>
+      <div class="placeholder"></div>
+      <div class="placeholder"></div>
+    </div>
+
+    <!-- Центральный блок с вопросами -->
+    <div class="question-box">
+      <h2>What are you looking for in a relationship?</h2>
+      <button class="button">Long-term commitment</button>
+      <button class="button">Casual dating</button>
+      <button class="button">Friendship</button>
+      <button class="button">Fun and adventure</button>
+    </div>
+  </body>
+</html>
