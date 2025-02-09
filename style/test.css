@@ -3,13 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  position: relative;
   background-image: url("../img/Left-top Circle.png"),
     url("../img/left-top2 Circle.png"), url("../img/Center Circle.png"),
     url("../img/left-bottom Circle.png"), url("../img/R-top Circle.png"),
@@ -24,8 +34,6 @@ body {
 
 .image-box {
   position: absolute;
-  width: 150px;
-  height: 200px;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -64,11 +72,11 @@ body {
 }
 
 .question-box {
-  background: white;
+  background: #f8f4f6 100%;
   width: 490px;
   height: 587px;
   border-radius: 20px;
   position: absolute;
-  transform: translate(-50%, -50%);
+
   padding: 20px;
 }
