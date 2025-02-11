@@ -53,13 +53,18 @@
         style="top: 457px; left: 1134px; width: 281px; height: 500px"
       ></div>
 
-      <div class="question-box">
+      <div class="question-box" id="question-box">
         <h2>What are you looking for in a relationship?</h2>
-        <button class="button">Long-term commitment</button>
-        <button class="button">Casual dating</button>
-        <button class="button">Friendship</button>
-        <button class="button">Fun and adventure</button>
+        <button class="button" onclick="nextQuestion(0)">
+          Long-term commitment
+        </button>
+        <button class="button" onclick="nextQuestion(1)">Casual dating</button>
+        <button class="button" onclick="nextQuestion(2)">Friendship</button>
+        <button class="button" onclick="nextQuestion(3)">
+          Fun and adventure
+        </button>
       </div>
     </div>
+    <script src="scripts/index.js"></script>
   </body>
 </html>
