@@ -19,7 +19,7 @@ body {
   width: 1440px;
   height: 1024px;
   margin: 0 auto;
-  position: relative;
+  position: fixed;
   background-image: url("../img/Left-top Circle.png"),
     url("../img/left-top2 Circle.png"), url("../img/Center Circle.png"),
     url("../img/left-bottom Circle.png"), url("../img/R-top Circle.png"),
