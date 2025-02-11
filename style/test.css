@@ -104,7 +104,8 @@ body {
 }
 
 .button {
-  width: 80%;
+  width: 412px;
+  height: 93px;
   padding: 15px;
   margin: 10px 0;
   border: none;
