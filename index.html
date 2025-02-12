@@ -16,7 +16,6 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
         overflow: hidden;
         display: flex;
@@ -46,7 +45,6 @@
           contain;
         background-attachment: fixed, fixed, fixed, fixed, fixed, fixed, fixed;
       }
-
       .image-box {
         position: absolute;
         background-size: cover;
@@ -54,7 +52,6 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       }
-
       .image-box:nth-child(1) {
         top: 40px;
         left: 42px;
@@ -125,10 +122,9 @@
         height: 500px;
         background-image: url("/img/man/img10r.jpg");
       }
-
       .question-box {
         position: fixed;
-        background: #f8f4f6 100%;
+        background: #f8f4f6;
         border-radius: 20px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         top: 50%;
@@ -142,7 +138,6 @@
         padding: 20px;
         z-index: 10;
       }
-
       .question-box h2 {
         margin-bottom: 20px;
         font-family: "Epilogue", sans-serif;
@@ -154,7 +149,6 @@
         color: #000000;
         opacity: 1;
       }
-
       .button {
         width: 421px;
         height: 93px;
@@ -173,91 +167,76 @@
         color: #ffffff;
         opacity: 1;
       }
-
       .button:hover {
         background: #860a58;
       }
-
       @media (max-width: 1280px) {
         .wrapper {
           width: 1024px;
           height: 728px;
-          /* Можно при необходимости перенастроить background */
           background-size: contain;
-          position: fixed; /* делаем relative, чтобы дочерние элементы масштабировались относительно него */
+          position: fixed;
         }
-
         .image-box:nth-child(1) {
-          /* 40px * 0.71 ≈ 28px, 42px * 0.71 ≈ 30px, 260px * 0.71 ≈ 185px, 462px * 0.71 ≈ 329px */
           top: 28px;
           left: 30px;
           width: 185px;
           height: 329px;
         }
         .image-box:nth-child(2) {
-          /* 19px → 13px, 353px → 250px, 198px → 141px, 352px → 250px */
           top: 13px;
           left: 250px;
           width: 141px;
           height: 250px;
         }
         .image-box:nth-child(3) {
-          /* 7px → 5px, 682px → 484px, 179px → 127px, 212px → 151px */
           top: 5px;
           left: 484px;
           width: 127px;
           height: 151px;
         }
         .image-box:nth-child(4) {
-          /* 77px → 55px, 985px → 700px, 198px → 141px, 352px → 250px */
           top: 55px;
           left: 700px;
           width: 141px;
           height: 250px;
         }
         .image-box:nth-child(5) {
-          /* 19px → 13px, 1214px → 861px, 216px → 153px, 325px → 231px */
           top: 13px;
           left: 861px;
           width: 153px;
           height: 231px;
         }
         .image-box:nth-child(6) {
-          /* 626px → 444px, 13px → 9px, 255px → 181px, 384px → 273px */
           top: 444px;
           left: 9px;
           width: 181px;
           height: 273px;
         }
         .image-box:nth-child(7) {
-          /* 566px → 402px, 283px → 201px, 192px → 136px, 359px → 255px */
           top: 402px;
           left: 201px;
           width: 136px;
           height: 255px;
         }
         .image-box:nth-child(8) {
-          /* 792px → 563px, 579px → 411px, 174px → 124px, 218px → 155px */
           top: 563px;
           left: 411px;
           width: 124px;
           height: 155px;
         }
         .image-box:nth-child(9) {
-          /* 664px → 471px, 876px → 621px, 217px → 154px, 325px → 231px */
           top: 471px;
           left: 621px;
           width: 154px;
           height: 231px;
         }
         .image-box:nth-child(10) {
-          /* 457px → 324px, 1134px → 806px, 281px → 200px, 500px → 355px */
           top: 324px;
           left: 806px;
           width: 200px;
           height: 355px;
         }
-
         .question-box {
           padding: 15px;
         }
@@ -274,13 +253,187 @@
         }
       }
 
-      @media (max-width: 480px) {
+      @media (max-width: 920px) {
+        .wrapper {
+          width: 768px;
+          height: 600px;
+          background-size: contain;
+          position: fixed;
+        }
+        .image-box:nth-child(1) {
+          top: 20px;
+          left: 20px;
+          width: 140px;
+          height: 250px;
+        }
+        .image-box:nth-child(2) {
+          top: 10px;
+          left: 190px;
+          width: 110px;
+          height: 200px;
+        }
+        .image-box:nth-child(3) {
+          top: 5px;
+          left: 350px;
+          width: 100px;
+          height: 130px;
+        }
+        .image-box:nth-child(4) {
+          top: 40px;
+          left: 520px;
+          width: 110px;
+          height: 200px;
+        }
+        .image-box:nth-child(5) {
+          top: 10px;
+          left: 640px;
+          width: 120px;
+          height: 190px;
+        }
+        .image-box:nth-child(6) {
+          top: 340px;
+          left: 10px;
+          width: 140px;
+          height: 220px;
+        }
+        .image-box:nth-child(7) {
+          top: 310px;
+          left: 150px;
+          width: 110px;
+          height: 200px;
+        }
+        .image-box:nth-child(8) {
+          top: 450px;
+          left: 320px;
+          width: 100px;
+          height: 120px;
+        }
+        .image-box:nth-child(9) {
+          top: 380px;
+          left: 470px;
+          width: 120px;
+          height: 190px;
+        }
+        .image-box:nth-child(10) {
+          top: 280px;
+          left: 600px;
+          width: 160px;
+          height: 280px;
+        }
+        .question-box {
+          padding: 12px;
+          width: 38%;
+        }
+        .question-box h2 {
+          font-size: 24px;
+          line-height: 28px;
+          margin-bottom: 12px;
+        }
+        .button {
+          width: 300px;
+          height: 60px;
+          font-size: 18px;
+          margin: 6px 0;
+        }
+      }
+      @media (max-width: 849px) {
+        .wrapper {
+          width: 580px;
+          height: 460px;
+          background-size: contain;
+          position: fixed;
+        }
+        .image-box:nth-child(1) {
+          top: 12px;
+          left: 12px;
+          width: 100px;
+          height: 170px;
+        }
+        .image-box:nth-child(2) {
+          top: 6px;
+          left: 140px;
+          width: 80px;
+          height: 150px;
+        }
+        .image-box:nth-child(3) {
+          top: 3px;
+          left: 240px;
+          width: 75px;
+          height: 90px;
+        }
+        .image-box:nth-child(4) {
+          top: 24px;
+          left: 360px;
+          width: 85px;
+          height: 150px;
+        }
+        .image-box:nth-child(5) {
+          top: 6px;
+          left: 460px;
+          width: 90px;
+          height: 140px;
+        }
+        .image-box:nth-child(6) {
+          top: 240px;
+          left: 6px;
+          width: 100px;
+          height: 150px;
+        }
+        .image-box:nth-child(7) {
+          top: 220px;
+          left: 110px;
+          width: 80px;
+          height: 140px;
+        }
+        .image-box:nth-child(8) {
+          top: 320px;
+          left: 210px;
+          width: 75px;
+          height: 85px;
+        }
+        .image-box:nth-child(9) {
+          top: 280px;
+          left: 320px;
+          width: 90px;
+          height: 140px;
+        }
+        .image-box:nth-child(10) {
+          top: 200px;
+          left: 420px;
+          width: 120px;
+          height: 200px;
+        }
+
+        /* Уменьшаем блок с вопросами */
+        .question-box {
+          padding: 8px;
+          width: 35%;
+          max-width: 320px;
+          border-radius: 10px;
+        }
+
+        /* Заголовок еще меньше */
+        .question-box h2 {
+          font-size: 16px;
+          line-height: 20px;
+          margin-bottom: 6px;
+        }
+
+        /* Компактные кнопки */
+        .button {
+          width: 200px;
+          height: 40px;
+          font-size: 12px;
+          margin: 3px 0;
+        }
+      }
+
+      @media (max-width: 500px) {
         .image-box {
           display: none;
         }
-
         .wrapper {
-          position: relative; /* Make container relative to position .question-box inside it */
+          position: relative;
           width: 100%;
           max-width: 520px;
           height: 850px;
@@ -291,7 +444,6 @@
           box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
           background: url("/img/man/img9r.jpg") no-repeat center/cover;
         }
-
         .question-box {
           width: 95%;
           position: absolute;
@@ -300,12 +452,10 @@
           left: 50%;
           transform: translateX(-50%);
         }
-
         .question-box h2 {
           font-size: 20px;
           line-height: 24px;
         }
-
         .button {
           width: 100%;
           height: 60px;
@@ -320,7 +470,6 @@
         }
       }
     </style>
-
     <div class="wrapper">
       <div class="image-box"></div>
       <div class="image-box"></div>
@@ -332,12 +481,8 @@
       <div class="image-box"></div>
       <div class="image-box"></div>
       <div class="image-box"></div>
-
       <div class="question-box" id="question-box">
-        <h2>
-          What are you looking <br />
-          for in a relationship?
-        </h2>
+        <h2>What are you looking <br />for in a relationship?</h2>
         <button class="button" onclick="nextQuestion(0)">
           Long-term commitment
         </button>
@@ -378,40 +523,37 @@
           ],
         },
       ];
-
       let currentQuestionIndex = 0;
-
       function nextQuestion(answerIndex) {
         currentQuestionIndex++;
         if (currentQuestionIndex < questions.length) {
           const questionBox = document.getElementById("question-box");
           const question = questions[currentQuestionIndex];
           questionBox.innerHTML = `
-            <h2>${question.question}</h2>
-            ${question.answers
-              .map(
-                (answer, index) =>
-                  `<button class="button" onclick="nextQuestion(${index})">${answer}</button>`
-              )
-              .join("")}
-          `;
+                  <h2>${question.question}</h2>
+                  ${question.answers
+                    .map(
+                      (answer, index) =>
+                        `<button class="button" onclick="nextQuestion(${index})">${answer}</button>`
+                    )
+                    .join("")}
+                `;
         } else {
           showFinalBlock();
         }
       }
-
       function showFinalBlock() {
         const questionBox = document.getElementById("question-box");
         questionBox.innerHTML = `
-          <h2>Thank you.</h2>
-          <h2>Please click the link<br /> below so that your <br />answers can be <br />evaluated</h2>
-          <button class="button">Evaluate answers</button>
-        `;
+                <h2>Thank you.</h2>
+                <h2>Please click the link<br /> below so that your <br />answers can be <br />evaluated</h2>
+                <button class="button">Evaluate answers</button>
+              `;
       }
+      let sliderInterval;
+      const wrapper = document.querySelector(".wrapper");
 
-      // Слайдер только для мобильной версии (max-width: 480px)
-      if (window.matchMedia("(max-width: 480px)").matches) {
-        const wrapper = document.querySelector(".wrapper");
+      function startSlider() {
         const images = [
           "/img/man/image1.webp",
           "/img/man/img2.webp",
@@ -422,13 +564,12 @@
 
         function switchBackground() {
           currentIndex = (currentIndex + 1) % images.length;
-
           const newSlide = document.createElement("div");
           newSlide.className = "bg-slide";
           newSlide.style.backgroundImage = `url("${images[currentIndex]}")`;
-          newSlide.style.left = "100%";
           newSlide.style.position = "absolute";
           newSlide.style.top = "0";
+          newSlide.style.left = "100%";
           newSlide.style.width = "100%";
           newSlide.style.height = "100%";
           newSlide.style.backgroundSize = "cover";
@@ -436,23 +577,46 @@
           newSlide.style.transition = "left 1s ease-in-out";
 
           wrapper.appendChild(newSlide);
-          newSlide.offsetWidth; // force reflow
-          newSlide.style.left = "0";
+          requestAnimationFrame(() => {
+            newSlide.style.left = "0";
+          });
 
           const prevSlide = wrapper.querySelector(".bg-slide.active");
           if (prevSlide) {
             prevSlide.style.left = "-100%";
-            setTimeout(() => {
-              if (prevSlide.parentNode) {
-                prevSlide.parentNode.removeChild(prevSlide);
-              }
-            }, 1500);
+            setTimeout(() => prevSlide.remove(), 1500);
           }
+
           newSlide.classList.add("active");
         }
 
-        setInterval(switchBackground, 1500);
+        sliderInterval = setInterval(switchBackground, 1500);
       }
+
+      function stopSlider() {
+        if (sliderInterval) {
+          clearInterval(sliderInterval);
+          sliderInterval = null;
+        }
+        // Удаляем все слайды, чтобы не мешали
+        document
+          .querySelectorAll(".bg-slide")
+          .forEach((slide) => slide.remove());
+      }
+
+      const mql = window.matchMedia("(max-width: 480px)");
+
+      function handleMobileChange(e) {
+        if (e.matches) {
+          if (!sliderInterval) startSlider();
+        } else {
+          stopSlider();
+        }
+      }
+
+      // Устанавливаем слушатель и сразу проверяем текущее состояние
+      mql.addEventListener("change", handleMobileChange);
+      handleMobileChange(mql);
     </script>
   </body>
 </html>
