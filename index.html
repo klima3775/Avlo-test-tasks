@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/test.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap"
       rel="stylesheet"
@@ -11,47 +10,328 @@
     <title>Test Background Images</title>
   </head>
   <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1440px;
+        height: 1024px;
+        margin: 0 auto;
+        position: fixed;
+        background-image: url("../img/Left-top Circle.png"),
+          url("../img/left-top2 Circle.png"), url("../img/Center Circle.png"),
+          url("../img/left-bottom Circle.png"), url("../img/R-top Circle.png"),
+          url("../img/right-bottom Circle.png"),
+          url("../img/right-top-Circle2.png");
+        background-position: left top, left top, center, left bottom, right top,
+          right bottom, right top;
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+          no-repeat, no-repeat;
+        background-size: contain, contain, contain, contain, contain, contain,
+          contain;
+        background-attachment: fixed, fixed, fixed, fixed, fixed, fixed, fixed;
+      }
+
+      .image-box {
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .image-box:nth-child(1) {
+        top: 40px;
+        left: 42px;
+        width: 260px;
+        height: 462px;
+        background-image: url("https://cdn.shopify.com/s/files/1/0457/9593/4375/files/13_061c87f7-69d0-49cf-987f-6f5cc3a50d45.jpg");
+      }
+      .image-box:nth-child(2) {
+        top: 19px;
+        left: 353px;
+        width: 198px;
+        height: 352px;
+        background-image: url("https://cdn.shopify.com/s/files/1/0457/9593/4375/files/14_74aa7764-ace7-4ea4-875a-12c169323626.jpg");
+      }
+      .image-box:nth-child(3) {
+        top: 7px;
+        left: 682px;
+        width: 179px;
+        height: 212px;
+        background-image: url("/img/man/img3.webp");
+      }
+      .image-box:nth-child(4) {
+        top: 77px;
+        left: 985px;
+        width: 198px;
+        height: 352px;
+        background-image: url("/img/man/img4.webp");
+      }
+      .image-box:nth-child(5) {
+        top: 19px;
+        left: 1214px;
+        width: 216px;
+        height: 325px;
+        background-image: url("/img/man/img5.webp");
+      }
+      .image-box:nth-child(6) {
+        top: 626px;
+        left: 13px;
+        width: 255px;
+        height: 384px;
+        background-image: url("/img/man/img6.webp");
+      }
+      .image-box:nth-child(7) {
+        top: 566px;
+        left: 283px;
+        width: 192px;
+        height: 359px;
+        background-image: url("/img/man/img7.webp");
+      }
+      .image-box:nth-child(8) {
+        top: 792px;
+        left: 579px;
+        width: 174px;
+        height: 218px;
+        background-image: url("/img/man/img8.webp");
+      }
+      .image-box:nth-child(9) {
+        top: 664px;
+        left: 876px;
+        width: 217px;
+        height: 325px;
+        background-image: url("/img/man/img9r.jpg");
+      }
+      .image-box:nth-child(10) {
+        top: 457px;
+        left: 1134px;
+        width: 281px;
+        height: 500px;
+        background-image: url("/img/man/img10r.jpg");
+      }
+
+      .question-box {
+        position: fixed;
+        background: #f8f4f6 100%;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        z-index: 10;
+      }
+
+      .question-box h2 {
+        margin-bottom: 20px;
+        font-family: "Epilogue", sans-serif;
+        font-weight: bold;
+        font-size: 37.43px;
+        line-height: 44.2px;
+        letter-spacing: 0px;
+        text-align: center;
+        color: #000000;
+        opacity: 1;
+      }
+
+      .button {
+        width: 421px;
+        height: 93px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        background: #a71d74;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-family: "Epilogue", sans-serif;
+        font-weight: 600;
+        font-size: 29.77px;
+        line-height: 33.5px;
+        letter-spacing: 0px;
+        text-align: center;
+        color: #ffffff;
+        opacity: 1;
+      }
+
+      .button:hover {
+        background: #860a58;
+      }
+
+      @media (max-width: 1280px) {
+        .wrapper {
+          width: 1024px;
+          height: 728px;
+          /* Можно при необходимости перенастроить background */
+          background-size: contain;
+          position: fixed; /* делаем relative, чтобы дочерние элементы масштабировались относительно него */
+        }
+
+        .image-box:nth-child(1) {
+          /* 40px * 0.71 ≈ 28px, 42px * 0.71 ≈ 30px, 260px * 0.71 ≈ 185px, 462px * 0.71 ≈ 329px */
+          top: 28px;
+          left: 30px;
+          width: 185px;
+          height: 329px;
+        }
+        .image-box:nth-child(2) {
+          /* 19px → 13px, 353px → 250px, 198px → 141px, 352px → 250px */
+          top: 13px;
+          left: 250px;
+          width: 141px;
+          height: 250px;
+        }
+        .image-box:nth-child(3) {
+          /* 7px → 5px, 682px → 484px, 179px → 127px, 212px → 151px */
+          top: 5px;
+          left: 484px;
+          width: 127px;
+          height: 151px;
+        }
+        .image-box:nth-child(4) {
+          /* 77px → 55px, 985px → 700px, 198px → 141px, 352px → 250px */
+          top: 55px;
+          left: 700px;
+          width: 141px;
+          height: 250px;
+        }
+        .image-box:nth-child(5) {
+          /* 19px → 13px, 1214px → 861px, 216px → 153px, 325px → 231px */
+          top: 13px;
+          left: 861px;
+          width: 153px;
+          height: 231px;
+        }
+        .image-box:nth-child(6) {
+          /* 626px → 444px, 13px → 9px, 255px → 181px, 384px → 273px */
+          top: 444px;
+          left: 9px;
+          width: 181px;
+          height: 273px;
+        }
+        .image-box:nth-child(7) {
+          /* 566px → 402px, 283px → 201px, 192px → 136px, 359px → 255px */
+          top: 402px;
+          left: 201px;
+          width: 136px;
+          height: 255px;
+        }
+        .image-box:nth-child(8) {
+          /* 792px → 563px, 579px → 411px, 174px → 124px, 218px → 155px */
+          top: 563px;
+          left: 411px;
+          width: 124px;
+          height: 155px;
+        }
+        .image-box:nth-child(9) {
+          /* 664px → 471px, 876px → 621px, 217px → 154px, 325px → 231px */
+          top: 471px;
+          left: 621px;
+          width: 154px;
+          height: 231px;
+        }
+        .image-box:nth-child(10) {
+          /* 457px → 324px, 1134px → 806px, 281px → 200px, 500px → 355px */
+          top: 324px;
+          left: 806px;
+          width: 200px;
+          height: 355px;
+        }
+
+        .question-box {
+          padding: 15px;
+        }
+        .question-box h2 {
+          font-size: 28px;
+          line-height: 33px;
+          margin-bottom: 15px;
+        }
+        .button {
+          width: 350px;
+          height: 70px;
+          font-size: 22px;
+          margin: 8px 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .image-box {
+          display: none;
+        }
+
+        .wrapper {
+          position: relative; /* Make container relative to position .question-box inside it */
+          width: 100%;
+          max-width: 520px;
+          height: 850px;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 20px;
+          padding: 20px;
+          text-align: center;
+          box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+          background: url("/img/man/img9r.jpg") no-repeat center/cover;
+        }
+
+        .question-box {
+          width: 95%;
+          position: absolute;
+          top: auto;
+          bottom: 2%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .question-box h2 {
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        .button {
+          width: 100%;
+          height: 60px;
+          padding: 8px;
+          margin: 8px 0;
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: 8px;
+          border: none;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+      }
+    </style>
+
     <div class="wrapper">
-      <div
-        class="image-box"
-        style="top: 40px; left: 42px; width: 260px; height: 462px"
-      ></div>
-      <div
-        class="image-box"
-        style="top: 19px; left: 353px; width: 198px; height: 352px"
-      ></div>
-      <div
-        class="image-box"
-        style="top: 7px; left: 682px; width: 179px; height: 212px"
-      ></div>
-      <div
-        class="image-box"
-        style="top: 77px; left: 985px; width: 198px; height: 352px"
-      ></div>
-      <div
-        class="image-box"
-        style="top: 19px; left: 1214px; width: 216px; height: 325px"
-      ></div>
-      <div
-        class="image-box"
-        style="top: 626px; left: 13px; width: 255px; height: 384px"
-      ></div>
-      <div
-        class="image-box"
-        style="top: 566px; left: 283px; width: 192px; height: 359px"
-      ></div>
-      <div
-        class="image-box"
-        style="top: 792px; left: 579px; width: 174px; height: 218px"
-      ></div>
-      <div
-        class="image-box"
-        style="top: 664px; left: 876px; width: 217px; height: 325px"
-      ></div>
-      <div
-        class="image-box"
-        style="top: 457px; left: 1134px; width: 281px; height: 500px"
-      ></div>
+      <div class="image-box"></div>
+      <div class="image-box"></div>
+      <div class="image-box"></div>
+      <div class="image-box"></div>
+      <div class="image-box"></div>
+      <div class="image-box"></div>
+      <div class="image-box"></div>
+      <div class="image-box"></div>
+      <div class="image-box"></div>
+      <div class="image-box"></div>
 
       <div class="question-box" id="question-box">
         <h2>
@@ -68,6 +348,111 @@
         </button>
       </div>
     </div>
-    <script src="scripts/index.js"></script>
+    <script>
+      const questions = [
+        {
+          question: "What are you looking <br />for in a relationship?",
+          answers: [
+            "Long-term commitment",
+            "Casual dating",
+            "Friendship",
+            "Fun and adventure",
+          ],
+        },
+        {
+          question: "What’s your preferred <br />communication style?",
+          answers: [
+            "Face-to-face conversations",
+            "Text messages",
+            "Phone calls",
+            "Video chats",
+          ],
+        },
+        {
+          question: "How do you like to<br /> spend your free time?",
+          answers: [
+            "Reading books",
+            "Watching TV shows",
+            "Engaging in hobbies",
+            "Spending time with family and friends",
+          ],
+        },
+      ];
+
+      let currentQuestionIndex = 0;
+
+      function nextQuestion(answerIndex) {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+          const questionBox = document.getElementById("question-box");
+          const question = questions[currentQuestionIndex];
+          questionBox.innerHTML = `
+            <h2>${question.question}</h2>
+            ${question.answers
+              .map(
+                (answer, index) =>
+                  `<button class="button" onclick="nextQuestion(${index})">${answer}</button>`
+              )
+              .join("")}
+          `;
+        } else {
+          showFinalBlock();
+        }
+      }
+
+      function showFinalBlock() {
+        const questionBox = document.getElementById("question-box");
+        questionBox.innerHTML = `
+          <h2>Thank you.</h2>
+          <h2>Please click the link<br /> below so that your <br />answers can be <br />evaluated</h2>
+          <button class="button">Evaluate answers</button>
+        `;
+      }
+
+      // Слайдер только для мобильной версии (max-width: 480px)
+      if (window.matchMedia("(max-width: 480px)").matches) {
+        const wrapper = document.querySelector(".wrapper");
+        const images = [
+          "/img/man/image1.webp",
+          "/img/man/img2.webp",
+          "/img/man/img3.webp",
+          "/img/man/img4.webp",
+        ];
+        let currentIndex = 0;
+
+        function switchBackground() {
+          currentIndex = (currentIndex + 1) % images.length;
+
+          const newSlide = document.createElement("div");
+          newSlide.className = "bg-slide";
+          newSlide.style.backgroundImage = `url("${images[currentIndex]}")`;
+          newSlide.style.left = "100%";
+          newSlide.style.position = "absolute";
+          newSlide.style.top = "0";
+          newSlide.style.width = "100%";
+          newSlide.style.height = "100%";
+          newSlide.style.backgroundSize = "cover";
+          newSlide.style.backgroundRepeat = "no-repeat";
+          newSlide.style.transition = "left 1s ease-in-out";
+
+          wrapper.appendChild(newSlide);
+          newSlide.offsetWidth; // force reflow
+          newSlide.style.left = "0";
+
+          const prevSlide = wrapper.querySelector(".bg-slide.active");
+          if (prevSlide) {
+            prevSlide.style.left = "-100%";
+            setTimeout(() => {
+              if (prevSlide.parentNode) {
+                prevSlide.parentNode.removeChild(prevSlide);
+              }
+            }, 1500);
+          }
+          newSlide.classList.add("active");
+        }
+
+        setInterval(switchBackground, 1500);
+      }
+    </script>
   </body>
 </html>

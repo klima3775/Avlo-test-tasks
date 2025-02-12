@@ -73,8 +73,6 @@ body {
 
 .question-box {
   position: fixed;
-  /* width: 490px;
-  height: 587px; */
   background: #f8f4f6 100%;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
