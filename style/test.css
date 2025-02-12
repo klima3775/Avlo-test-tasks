@@ -162,14 +162,37 @@ body {
   height: 500px;
 } */
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
+  .image-box {
+    display: none;
+  }
+  .wrapper {
+    width: 90%;
+    max-width: 520px;
+    height: 844px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    background: url("/img/man/img9r.jpg") no-repeat center/cover;
+  }
+
   .question-box h2 {
     font-size: 18px;
     line-height: 24px;
   }
 
   .button {
-    height: 45px;
-    font-size: 14px;
+    width: 80%;
+    padding: 8px;
+    margin: 8px 0;
+
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
   }
-} */
+}
