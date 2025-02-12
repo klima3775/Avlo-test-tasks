@@ -57,3 +57,52 @@ function showFinalBlock() {
           <button class="button">Evaluate answers</button>
         `;
 }
+
+const wrapper = document.querySelector(".wrapper");
+
+// Array of background images
+const images = [
+  "/img/man/image1.webp",
+  "/img/man/image1.webp",
+  "/img/man/img2.webp",
+  "/img/man/img3.webp",
+  "/img/man/img4.webp",
+  // ...add as many as needed
+];
+
+let currentIndex = 0;
+let switchInterval = null;
+
+// Функция переключения фонового изображения
+function switchBackground() {
+  currentIndex = (currentIndex + 1) % images.length;
+  wrapper.style.backgroundImage = `url("${images[currentIndex]}")`;
+}
+
+// Функция, отслеживающая изменение ширины экрана
+function handleMediaChange(e) {
+  if (e.matches) {
+    // мобильная версия
+    if (!switchInterval) {
+      // Запускаем переключение (для теста 1000 мс, можно заменить на 15000)
+      switchInterval = setInterval(switchBackground, 1000);
+    }
+  } else {
+    // десктоп версия
+    if (switchInterval) {
+      clearInterval(switchInterval);
+      switchInterval = null;
+      // Сбрасываем фоновое изображение, если необходимо
+      wrapper.style.backgroundImage = "";
+    }
+  }
+}
+
+// Создаем медиа-запрос для экрана с max-width 480px
+const mq = window.matchMedia("(max-width: 480px)");
+
+// Привязываем функцию-обработчик к изменениям медиа-запроса
+mq.addEventListener("change", handleMediaChange);
+
+// Инициализируем состояние при загрузке страницы
+handleMediaChange(mq);
