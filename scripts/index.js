@@ -1,6 +1,6 @@
 const questions = [
   {
-    question: "What are you looking for in a relationship?",
+    question: "What are you looking <br />for in a relationship?",
     answers: [
       "Long-term commitment",
       "Casual dating",
@@ -9,7 +9,7 @@ const questions = [
     ],
   },
   {
-    question: "What’s your preferred communication style?",
+    question: "What’s your preferred <br />communication style?",
     answers: [
       "Face-to-face conversations",
       "Text messages",
@@ -18,7 +18,7 @@ const questions = [
     ],
   },
   {
-    question: "How do you like to spend your free time?",
+    question: "How do you like to<br /> spend your free time?",
     answers: [
       "Reading books",
       "Watching TV shows",
@@ -53,7 +53,7 @@ function showFinalBlock() {
   const questionBox = document.getElementById("question-box");
   questionBox.innerHTML = `
           <h2>Thank you.</h2>
-          <p>Please click the link below so that your answers can be evaluated</p>
+          <h2>Please click the link<br /> below so that your <br />answers can be <br />evaluated</h2>
           <button class="button">Evaluate answers</button>
         `;
 }

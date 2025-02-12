@@ -73,8 +73,8 @@ body {
 
 .question-box {
   position: fixed;
-  width: 490px;
-  height: 587px;
+  /* width: 490px;
+  height: 587px; */
   background: #f8f4f6 100%;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -105,7 +105,6 @@ body {
 .button {
   width: 421px;
   height: 93px;
-  /* padding: 15px; */
   margin: 10px 0;
   border: none;
   border-radius: 8px;
@@ -125,3 +124,52 @@ body {
 .button:hover {
   background: #860a58;
 }
+/* @media (max-width: 768px) {
+  .image-box {
+    display: none;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 520px;
+    height: 844px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    background: url("/img/man/img9r.jpg") no-repeat center/cover;
+  }
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  background: linear-gradient(to right, #b3127d, #8921b4);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.question-box {
+  max-width: 320px;
+  height: 500px;
+} */
+
+/* @media (max-width: 480px) {
+  .question-box h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .button {
+    height: 45px;
+    font-size: 14px;
+  }
+} */

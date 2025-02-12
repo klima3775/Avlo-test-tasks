@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relationship Survey</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* изменено с flex-end на center */
+        height: 100vh;
+      }
+
+      .container {
+        position: relative; /* для позиционирования вложенных абсолютных элементов */
+        width: 100%;
+        max-width: 320px;
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 20px 20px 0 0;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+        background: url("/img/man/image1.webp") no-repeat center/cover;
+      }
+
+      .question-box {
+        position: absolute;
+        bottom: 0; /* размещаем блок снизу внутри контейнера */
+        left: 0;
+        width: 100%;
+        height: 150px; /* укажите нужную высоту */
+        background-color: #ffffff;
+        padding: 15px;
+        text-align: center;
+        border-radius: 0 0 20px 20px;
+      }
+
+      .question-box h2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #000;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        background: linear-gradient(to right, #b3127d, #8921b4);
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .button:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="question-box">
+        <h2>What are you looking for in a relationship?</h2>
+        <button class="button">Long-term commitment</button>
+        <button class="button">Casual dating</button>
+        <button class="button">Friendship</button>
+        <button class="button">Fun and adventure</button>
+      </div>
+    </div>
+  </body>
+</html>
